@@ -16,7 +16,7 @@ iterations = 5                 # number of iterations
 
 ######### calculations ##########
 df = pd.read_csv(dataset_path)
-array = dataset_path['your_column_header']
+array = df['your_column_header']
 dp_result = eval('gramdp_'+ query)(array=array, desired_privacy=desired_privacy, iterations=iterations)
 print('Average DP result: {r}'.format(r=dp_result[0]))
 print('Average std of Scaled Error: {r}'.format(r=dp_result[1]))
